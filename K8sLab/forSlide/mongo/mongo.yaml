@@ -23,14 +23,20 @@ spec:
         env:
         - name: MONGO_INITDB_ROOT_USERNAME
           valueFrom:
-            secretKeyRef:
-              name: mongodb-secret
+            configMapKeyRef:
+              name: mongodb-configmap
               key: mongo-root-username
         - name: MONGO_INITDB_ROOT_PASSWORD
           valueFrom: 
             secretKeyRef:
               name: mongodb-secret
               key: mongo-root-password
+        volumeMounts:
+          - name: mongo-volume
+            mountPath: /tmp/volume
+      volumes:
+        - name: mongo-volume
+          emptyDir: {}
 ---
 apiVersion: v1
 kind: Service
