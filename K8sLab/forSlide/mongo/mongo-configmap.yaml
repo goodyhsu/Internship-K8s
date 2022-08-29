@@ -3,5 +3,7 @@ kind: ConfigMap
 metadata:
   name: mongodb-configmap
 data:
-  mongo-root-username: user
-  database_url: mongodb-service
+  mongo-root-username: username
+  # database_url: mongodb-service
+
+  
