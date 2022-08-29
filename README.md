@@ -1,5 +1,5 @@
 ## 1.工具安裝
-`brew install minikube`
+`brew install minikube`<br>
 `brew install hyperkit`
 
 ### 測試是否安裝成功
@@ -22,7 +22,7 @@
 * 查看現有的 Pod
 `kubectl get pod`
 * 取得 Pod image 版本
-`$ kubectl describe pod [pod name] | grep image`
+`kubectl describe pod [pod name] | grep image`
 
 ## 4.Demo: Failure
 * 創建 2 replica 的 Deployment
@@ -34,4 +34,4 @@
 * 刪除其中一個 Pod replica
 `kubectl delete [pod name]`
 * 取得 Deployment 發生的 event
-`$ kubectl describe deployments.apps my-nginx-2replica | grep Events -A10`
+`kubectl describe deployments.apps my-nginx-2replica | grep Events -A10`
