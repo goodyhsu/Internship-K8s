@@ -4,6 +4,3 @@ metadata:
   name: mongodb-configmap
 data:
   mongo-root-username: username
-  # database_url: mongodb-service
-
-  
