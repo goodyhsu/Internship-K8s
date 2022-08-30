@@ -1,13 +1,13 @@
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: mongo-volume
-spec:
-  accessModes:
-    - ReadWriteOnce
-  capacity:
-    storage: 2Gi
-  hostPath:
-    path: /data/qqq
+# apiVersion: v1
+# kind: PersistentVolume
+# metadata:
+#   name: mongo-volume
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
+#   capacity:
+#     storage: 2Gi
+#   hostPath:
+#     path: /data/qqq
 
 

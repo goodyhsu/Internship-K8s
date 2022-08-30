@@ -6,7 +6,7 @@ all:
 	kubectl apply -f mongo-express.yaml
 	kubectl apply -f mongo-express-service.yaml
 	kubectl apply -f mongo-ingress.yaml
-	kubectl apply -f mongo-volume.yaml
+	# kubectl apply -f mongo-volume.yaml
 
 clean:
 	kubectl delete configmap mongodb-configmap
@@ -16,4 +16,4 @@ clean:
 	kubectl delete service mongodb-service
 	kubectl delete service mongo-express-service
 	kubectl delete ingress mongo-ingress
-	kubectl delete persistentvolume mongo-volume
+	# kubectl delete persistentvolume mongo-volume
