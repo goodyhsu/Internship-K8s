@@ -16,4 +16,4 @@ clean:
 	kubectl delete service mongodb-service
 	kubectl delete service mongo-express-service
 	kubectl delete ingress mongo-ingress
-	# kubectl delete volume
+	kubectl delete persistentvolume mongo-volume

@@ -14,6 +14,10 @@ spec:
       labels:
         app: mongodb
     spec:
+      volumes:
+      - name: mongo-volume
+        hostPath:
+          path: /data/qqq
       containers:
       - name: mongodb
         image: mongo:6.0
@@ -30,4 +34,7 @@ spec:
             secretKeyRef:
               name: mongodb-secret
               key: mongo-root-password
+        volumeMounts:
+        - mountPath: "/hi"
+          name: mongo-volume
 
