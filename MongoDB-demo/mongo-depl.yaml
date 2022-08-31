@@ -17,7 +17,7 @@ spec:
       volumes:
       - name: mongo-volume
         hostPath:
-          path: /data/qqq
+          path: /data/mongo-volume
       containers:
       - name: mongodb
         image: mongo:6.0
@@ -35,6 +35,6 @@ spec:
               name: mongodb-secret
               key: mongo-root-password
         volumeMounts:
-        - mountPath: "/hi"
+        - mountPath: "/volume"
           name: mongo-volume
 
